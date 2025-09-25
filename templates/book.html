@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Book a Flight - Horizon Travels</title>
+    <style>
+        body {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+        .navbar {
+            background-color: #ff9800;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .card {
+            background: #ffcc80;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #e65100;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #bf360c;
+        }
+        footer {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='horizonTravels.png') }}" alt="Logo" height="40">
+                Horizon Travels
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/book">Book</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acct">My Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="card w-50">
+            <h2 class="text-center">Book Your Flight</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="departure" class="form-label">Departure</label>
+                    <select class="form-select" id="departure">
+                        <option value="">Select departure city</option>
+                        <option>Newcastle</option>
+                        <option>Bristol</option>
+                        <option>Cardiff</option>
+                        <option>Manchester</option>
+                        <option>London</option>
+                        <option>Glasgow</option>
+                        <option>Edinburgh</option>
+                        <option>Portsmouth</option>
+                        <option>Dundee</option>
+                        <option>Southampton</option>
+                        <option>Birmingham</option>
+                        <option>Aberdeen</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="arrival" class="form-label">Arrival</label>
+                    <select class="form-select" id="arrival">
+                        <option value="">Select arrival city</option>
+                        <option>Bristol</option>
+                        <option>Newcastle</option>
+                        <option>Edinburgh</option>
+                        <option>Manchester</option>
+                        <option>London</option>
+                        <option>Glasgow</option>
+                        <option>Portsmouth</option>
+                        <option>Dundee</option>
+                        <option>Southampton</option>
+                        <option>Birmingham</option>
+                        <option>Aberdeen</option>
+                        <option>Cardiff</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="passengers" class="form-label">Passengers</label>
+                    <input type="number" class="form-control" id="passengers" min="1" value="1">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="mb-3">
+                    <label for="class" class="form-label">Class</label>
+                    <select class="form-select" id="class">
+                        <option>Economy</option>
+                        <option>Business</option>
+                    </select>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-custom">Search Flights</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Horizon Travels Air. All rights reserved.</p>
+    </footer>
+</body>
+</html>

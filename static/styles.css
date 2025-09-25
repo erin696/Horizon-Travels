@@ -1,0 +1,30 @@
+body {
+    background-color:#e87e42;
+}
+
+.header-main {
+    width: 100%;
+    height:60px;
+    background-color:#f6b895;
+    display: flex;
+}
+
+.header-main-logo {
+    width:fit-content;
+    height:100%;
+    background-color:#f26736; 
+}
+
+
+
+.header-main-nav {
+    width:120px;
+    height:100%;
+    background-color:#fb4505; 
+}
+
+.header-main-3 {
+    width:120px;
+    height: 100%;
+    background-color:#d33b06;
+}
